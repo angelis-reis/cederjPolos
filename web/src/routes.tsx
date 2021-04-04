@@ -14,10 +14,9 @@ function Routes() {
             <Switch>
                 <Route path="/" exact component={Landing} />
                 <Route path="/app" component={OrphanagesMap} />
-
                 <Route path="/orphanages/create" component={CreateOrphanage} />
                 <Route path="/orphanages/:id" component={Orphanage} />   
-                    {/* fiquei 4 horas procurando um erro, erá um espaço no fim desta rota */}
+                    {/* fiquei 4 horas procurando um erro, ára um espaço no fim desta rota */}
 
             </Switch>
         

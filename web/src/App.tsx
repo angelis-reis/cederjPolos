@@ -6,16 +6,9 @@ import 'leaflet/dist/leaflet.css';
 
 import Routes from './routes';
 
-
-// componente: função que retorna html
-
-
-
-
 function App() {
   return (
-    <Routes/>
-    
+    <Routes/>   
 
   );
 }
