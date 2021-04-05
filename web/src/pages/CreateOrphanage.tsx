@@ -1,19 +1,14 @@
 import React, { ChangeEvent, FormEvent, useState} from "react";
 import { Map, Marker, TileLayer} from 'react-leaflet';
 import { LeafletMouseEvent} from 'leaflet';
-
 import { FiPlus } from "react-icons/fi";
-
 import { useHistory } from "react-router-dom";
-
-
 import Sidebar from "../components/Sidebar";
 import mapIcon from "../utils/mapIcon";
-
 import '../styles/pages/create-orphanage.css';
 import api from "../services/api";
 
-
+import RadioButton from "../components/RadioButton";
 
 
 
@@ -23,7 +18,6 @@ export default function OrphanagesMap() {
   const history = useHistory();
 
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
-
   const [name, setName] = useState('');
   const [about, setAbout] = useState('');
   const [instructions, setInstructions] = useState('');
@@ -48,7 +42,6 @@ export default function OrphanagesMap() {
     event.preventDefault();
 
     const { latitude, longitude} = position;
-
     const data = new FormData();
 
     data.append('name', name);
@@ -64,11 +57,8 @@ export default function OrphanagesMap() {
     })
 
     await api.post('orphanages', data);
-
     alert ('Cadastro realizado com sucesso')
-
     history.push('/app');
-
 
     // console.log({
     //   name,
@@ -109,13 +99,11 @@ export default function OrphanagesMap() {
 
           <fieldset>
             <legend>Dados do Polo</legend>
-
             <Map 
               center={[-22.8000,-42.5337]} 
               zoom={8} 
               style={{width: '100%', height:'400px'}}
               onclick={handleMapClick}
-              
             >
 
               <TileLayer 
@@ -134,10 +122,7 @@ export default function OrphanagesMap() {
                   ]}
                 />
               )}
-
             </Map>
-
-
 
             <div className="input-block">
               <label htmlFor="name">Nome do Polo</label>
@@ -176,7 +161,6 @@ export default function OrphanagesMap() {
               </div>
 
               <input multiple onChange={handleSelectImages} type="file" id="image[]" />
-
               
             </div>
           </fieldset>
@@ -195,12 +179,11 @@ export default function OrphanagesMap() {
             </div> */}
 
             <div className="input-block">
-              <label htmlFor="opening_hours">Horário de funiconamento</label>
+              <label htmlFor="opening_hours">Horário de funcionamento</label>
               <input 
                 id="opening_hours" 
                 value={opening_hours}
                 onChange={event => setOpeningHours(event.target.value)} 
-                
               />
             </div>
 
@@ -211,7 +194,6 @@ export default function OrphanagesMap() {
                 value={opening_hours}
                 placeholder="E-mail"
                 onChange={event => setOpeningHours(event.target.value)} 
-                
               />
 
               <input 
@@ -219,7 +201,6 @@ export default function OrphanagesMap() {
                 value={opening_hours}
                 placeholder="Telefone"
                 onChange={event => setOpeningHours(event.target.value)} 
-                
               />
 
             </div>
@@ -229,13 +210,15 @@ export default function OrphanagesMap() {
 
               <div className="button-select">
 
+                <RadioButton name={"Tecnologia em Sistema da Computação"} />
+
                 <button 
                   type="button" 
                   className={!open_on_weekends ? 'active' : '' }
                   onClick={() => setOpenOnWeekends(true)}
                   >
                     Tecnologia em Sistema da Computação
-                  </button>
+                </button>
 
                 <button
                   type="button"

@@ -68,11 +68,7 @@ function OrphanagesMap() {
                                     <FiArrowRight size={20} color = "#fff"/>
 
                                 </Link> */}
-
-                                
-
                             </Popup> 
-
                         </Marker>
                     )
                 })}
