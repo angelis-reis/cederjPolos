@@ -108,12 +108,12 @@ export default function OrphanagesMap() {
         <form onSubmit={handleSubmit} className="create-orphanage-form">
 
           <fieldset>
-            <legend>Dados</legend>
+            <legend>Dados do Polo</legend>
 
             <Map 
-              center={[-22.9732698,-43.2032649]} 
-              style={{width: '100%', height: 280 }}
-              zoom= {12}
+              center={[-22.8000,-42.5337]} 
+              zoom={8} 
+              style={{width: '100%', height:'400px'}}
               onclick={handleMapClick}
               
             >
@@ -140,7 +140,7 @@ export default function OrphanagesMap() {
 
 
             <div className="input-block">
-              <label htmlFor="name">Nome</label>
+              <label htmlFor="name">Nome do Polo</label>
               <input 
                 id="name"
                 value={name}
@@ -149,7 +149,7 @@ export default function OrphanagesMap() {
             </div>
 
             <div className="input-block">
-              <label htmlFor="about">Sobre <span>Máximo de 300 caracteres</span></label>
+              <label htmlFor="about">Endereço do Polo </label>
               <textarea
                 id="about"
                 maxLength={300} 
@@ -182,7 +182,7 @@ export default function OrphanagesMap() {
           </fieldset>
 
           <fieldset>
-            <legend>Visitação</legend>
+            {/* <legend>Informações</legend>
 
             <div className="input-block">
               <label htmlFor="instructions">Instruções</label>
@@ -192,7 +192,7 @@ export default function OrphanagesMap() {
                 onChange={event => setInstructions(event.target.value)} 
                 
               />
-            </div>
+            </div> */}
 
             <div className="input-block">
               <label htmlFor="opening_hours">Horário de funiconamento</label>
@@ -205,16 +205,36 @@ export default function OrphanagesMap() {
             </div>
 
             <div className="input-block">
-              <label htmlFor="open_on_weekends">Atende fim de semana</label>
+              <label htmlFor="opening_hours">Contatos do Polo</label>
+              <input 
+                id="opening_hours" 
+                value={opening_hours}
+                placeholder="E-mail"
+                onChange={event => setOpeningHours(event.target.value)} 
+                
+              />
+
+              <input 
+                id="opening_hours" 
+                value={opening_hours}
+                placeholder="Telefone"
+                onChange={event => setOpeningHours(event.target.value)} 
+                
+              />
+
+            </div>
+
+            <div className="input-block">
+              <label htmlFor="open_on_weekends">Cursos oferecidos no Polo</label>
 
               <div className="button-select">
 
                 <button 
                   type="button" 
-                  className={open_on_weekends ? 'active' : '' }
+                  className={!open_on_weekends ? 'active' : '' }
                   onClick={() => setOpenOnWeekends(true)}
                   >
-                    Sim
+                    Tecnologia em Sistema da Computação
                   </button>
 
                 <button
@@ -222,8 +242,138 @@ export default function OrphanagesMap() {
                   className={!open_on_weekends ? 'active' : '' }
                   onClick={() => setOpenOnWeekends(false)}
                 >
-                  Não
+                  Licenciatura em Biologia
                 </button>
+
+                <button 
+                  type="button" 
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(true)}
+                  >
+                    Tecnologia em Sistema da Computação
+                  </button>
+
+                <button
+                  type="button"
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(false)}
+                >
+                  Licenciatura em Biologia
+                </button>
+
+                <button 
+                  type="button" 
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(true)}
+                  >
+                    Tecnologia em Sistema da Computação
+                  </button>
+
+                <button
+                  type="button"
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(false)}
+                >
+                  Licenciatura em Biologia
+                </button>
+
+                <button 
+                  type="button" 
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(true)}
+                  >
+                    Tecnologia em Sistema da Computação
+                  </button>
+
+                <button
+                  type="button"
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(false)}
+                >
+                  Licenciatura em Biologia
+                </button>
+
+                <button 
+                  type="button" 
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(true)}
+                  >
+                    Tecnologia em Sistema da Computação
+                  </button>
+
+                  <button 
+                  type="button" 
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(true)}
+                  >
+                    Tecnologia em Sistema da Computação
+                  </button>
+
+                <button
+                  type="button"
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(false)}
+                >
+                  Licenciatura em Biologia
+                </button>
+
+                <button 
+                  type="button" 
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(true)}
+                  >
+                    Tecnologia em Sistema da Computação
+                  </button>
+
+                <button
+                  type="button"
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(false)}
+                >
+                  Licenciatura em Biologia
+                </button>
+
+                <button 
+                  type="button" 
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(true)}
+                  >
+                    Tecnologia em Sistema da Computação
+                  </button>
+
+                <button
+                  type="button"
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(false)}
+                >
+                  Licenciatura em Biologia
+                </button>
+
+                <button 
+                  type="button" 
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(true)}
+                  >
+                    Tecnologia em Sistema da Computação
+                  </button>
+
+                <button
+                  type="button"
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(false)}
+                >
+                  Licenciatura em Biologia
+                </button>
+
+                <button 
+                  type="button" 
+                  className={!open_on_weekends ? 'active' : '' }
+                  onClick={() => setOpenOnWeekends(true)}
+                  >
+                    Tecnologia em Sistema da Computação
+                  </button>
+
+                
 
               </div>
             </div>

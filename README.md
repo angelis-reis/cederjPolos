@@ -1,3 +1,3 @@
-App Web Happy, desenvolvido na 3 Semana NLW da RocketSeat.(em desenvolvimento)
+Mapa de geolocalização colaborativo dos polos de ensino do Consórcio CEDERJ
 
-Desenvolvido com React, NodeJS e React Native.
+Desenvolvido com React, NodeJS 

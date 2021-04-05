@@ -4,7 +4,7 @@ import {FiArrowRight} from 'react-icons/fi'
 
 import '../styles/pages/landing.css';
 
-import logoImg from '../images/logo.svg'
+import logoImg from '../images/logo_cederj.jpg'
 
 import { Link} from 'react-router-dom';
 
@@ -16,17 +16,25 @@ function Landing() {
 
     <div className="content-wrapper">
 
-      <img src={logoImg} alt="Happy Logo"/>
+      <div className="logo-wrapper">
+        <img src={logoImg} alt="Mapa CEDERJ"/>
+        <span>
+          POLOS <br></br>CEDERJ
+        </span>
+      </div>
+
+      
 
       <main>
-        <h1>Leve felicidade para o mundo</h1>
+        <h1>Mapa com a localização dos 35 polos do CEDERJ e das estruturas no seu entorno</h1>
 
-        <p>Visite orfanatos e mude o dia de muitas crianças.</p>
+        <p>Construção colaborativa,
+          de estudates para  estudante</p>
 
       </main>
 
       <div className="location">
-        <strong>Rio de Janeiro</strong>
+        <span>Estado do</span>
         <span>Rio de Janeiro</span>
       </div>
 

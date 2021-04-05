@@ -2,15 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link} from 'react-router-dom';
 import {FiArrowRight, FiPlus} from 'react-icons/fi';
 import { Map, TileLayer, Marker, Popup} from 'react-leaflet';
-
 import api from '../services/api';
- 
-
-
-
 import mapMarkerImg from '../images/map-marker.svg';
 import mapIcon from '../utils/mapIcon';
-
+import poloIcon from '../utils/mapIcon.png';
 import '../styles/pages/orphanages-map.css';
 
 
@@ -21,16 +16,9 @@ interface Orphanage{
     name: string;
 };
 
-
-
-
-
-
-
 function OrphanagesMap() {
 
     const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
-
     
     useEffect( () => {
         api.get('orphanages').then(response => {
@@ -38,27 +26,24 @@ function OrphanagesMap() {
         });
     }, [ ]);
 
-
-
-
     return( 
         <div id="page-map">
             <aside>
                 <header>
-                    <img src={mapMarkerImg} alt="Logo Happy"/>
+                    <img className="polo-icon" src={poloIcon} alt="Marcador Polo"/>
 
-                    <h2>Escolha um orfanato no mapa</h2>
-                    <p>Muitas crianças estão esperando sua visita :)</p>
+                    <h2>Escolha um polo no mapa</h2>
+                    <p>São 35 polos por todo o Estado do RJ</p>
                 </header>
                 <footer>
                     <strong>Rio de Janeiro</strong>
-                    <span>Rio de Janeiro</span>
+                    
                 </footer>
             </aside>
 
             <Map 
-                center={[-22.9732698,-43.2032649]} 
-                zoom={14} 
+                center={[-22.8000,-42.5337]} 
+                zoom={9} 
                 style={{width: '100%', height:'100%'}}>
 
                 {/* <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" /> */}
@@ -92,22 +77,12 @@ function OrphanagesMap() {
                     )
                 })}
 
-
-
             </Map>
-
-                
-
             <Link to="/orphanages/create" className="create-orphanage">
                 <FiPlus size="32" color="#FFF" />
             </Link>
         </div>
-        
-
     )
 }
 
 export default OrphanagesMap;
-
-
-// paramos no ep 3 47:40 no momento de colocar as infomações dinâmicas na página de cada orfanato
