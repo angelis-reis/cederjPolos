@@ -8,6 +8,8 @@ import mapIcon from "../utils/mapIcon";
 import '../styles/pages/create-orphanage.css';
 import api from "../services/api";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import RadioButton from "../components/RadioButton";
 
 
@@ -189,7 +191,8 @@ export default function OrphanagesMap() {
 
             <div className="input-block">
               <label htmlFor="opening_hours">Contatos do Polo</label>
-              <input 
+
+              <input className="email"
                 id="opening_hours" 
                 value={opening_hours}
                 placeholder="E-mail"
@@ -210,151 +213,43 @@ export default function OrphanagesMap() {
 
               <div className="button-select">
 
+                <RadioButton name={ "Tecnologia em Sistema da Computação" } />
+
+                <RadioButton name={" Licenciatura em Biologia"}  />
+
+                <RadioButton name={"Tecnologia em Sistema da Computação"}  />
+
+                <RadioButton name={" Licenciatura em Biologia"}  />
+
                 <RadioButton name={"Tecnologia em Sistema da Computação"} />
 
-                <button 
-                  type="button" 
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(true)}
-                  >
-                    Tecnologia em Sistema da Computação
-                </button>
+                <RadioButton name={" Licenciatura em Biologia"} />
 
-                <button
-                  type="button"
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(false)}
-                >
-                  Licenciatura em Biologia
-                </button>
+                <RadioButton name={"Tecnologia em Sistema da Computação"} />
 
-                <button 
-                  type="button" 
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(true)}
-                  >
-                    Tecnologia em Sistema da Computação
-                  </button>
+                <RadioButton name={" Licenciatura em Biologia"} />
 
-                <button
-                  type="button"
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(false)}
-                >
-                  Licenciatura em Biologia
-                </button>
+                <RadioButton name={"Tecnologia em Sistema da Computação"} />
 
-                <button 
-                  type="button" 
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(true)}
-                  >
-                    Tecnologia em Sistema da Computação
-                  </button>
+                <RadioButton name={" Licenciatura em Biologia"} />
 
-                <button
-                  type="button"
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(false)}
-                >
-                  Licenciatura em Biologia
-                </button>
+                <RadioButton name={"Tecnologia em Sistema da Computação"} />
 
-                <button 
-                  type="button" 
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(true)}
-                  >
-                    Tecnologia em Sistema da Computação
-                  </button>
+                <RadioButton name={" Licenciatura em Biologia"} />
 
-                <button
-                  type="button"
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(false)}
-                >
-                  Licenciatura em Biologia
-                </button>
+                <RadioButton name={"Tecnologia em Sistema da Computação"} />
 
-                <button 
-                  type="button" 
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(true)}
-                  >
-                    Tecnologia em Sistema da Computação
-                  </button>
+                <RadioButton name={" Licenciatura em Biologia"} />
 
-                  <button 
-                  type="button" 
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(true)}
-                  >
-                    Tecnologia em Sistema da Computação
-                  </button>
+                <RadioButton name={"Tecnologia em Sistema da Computação"} />
 
-                <button
-                  type="button"
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(false)}
-                >
-                  Licenciatura em Biologia
-                </button>
+                <RadioButton name={" Licenciatura em Biologia"} />
 
-                <button 
-                  type="button" 
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(true)}
-                  >
-                    Tecnologia em Sistema da Computação
-                  </button>
+                <RadioButton name={"Tecnologia em Sistema da Computação"} />
 
-                <button
-                  type="button"
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(false)}
-                >
-                  Licenciatura em Biologia
-                </button>
+                <RadioButton name={" Licenciatura em Biologia"} />
 
-                <button 
-                  type="button" 
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(true)}
-                  >
-                    Tecnologia em Sistema da Computação
-                  </button>
-
-                <button
-                  type="button"
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(false)}
-                >
-                  Licenciatura em Biologia
-                </button>
-
-                <button 
-                  type="button" 
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(true)}
-                  >
-                    Tecnologia em Sistema da Computação
-                  </button>
-
-                <button
-                  type="button"
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(false)}
-                >
-                  Licenciatura em Biologia
-                </button>
-
-                <button 
-                  type="button" 
-                  className={!open_on_weekends ? 'active' : '' }
-                  onClick={() => setOpenOnWeekends(true)}
-                  >
-                    Tecnologia em Sistema da Computação
-                  </button>
+                
 
                 
 

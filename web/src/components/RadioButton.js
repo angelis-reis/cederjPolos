@@ -1,64 +1,70 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+/* https://codepen.io/gabrielferreira/pen/oYxNVy/
+
+tenho que conseguir adaptar os ícones do fontWesome pra ficar com esse efeito maroto */
+
 const StyledRadioButton = styled.div `
-    
-    @import url("https://fonts.googleapis.com/css?family=Dax:400,900");
-       
-        .middle {
-            width: 100%;
-            text-align: center;
+
+        label {
+            height: 100px;
             
         }
-        .middle h1 {
-            font-family: "Dax", sans-serif;
-            color: #fff;
-        }
-        .middle input[type="checkbox"] {
+       
+        input[type="checkbox"] {
             display: none;
+            
         }
-        .middle input[type="checkbox"]:checked + .box {
+        input[type="checkbox"]:checked + .box {
             background-color: #007e90;
         }
-        .middle input[type="checkbox"]:checked + .box span {
+        input[type="checkbox"]:checked + .box span {
             color: white;
-            transform: translateY(70px);
+            transform: translateY(50px);
         }
-        .middle input[type="checkbox"]:checked + .box span:before {
+        input[type="checkbox"]:checked + .box span:before {
             transform: translateY(0px);
             opacity: 1;
         }
-        .middle .box {
+
+        .box {
             width: 270px;
             height: 100px;
             border: 1px solid #007e90;
             background-color: #fff;
             transition: all 250ms ease;
             will-change: transition;
-            display: inline-block;
             text-align: center;
+            padding-top:30px;
+            
+            
             cursor: pointer;
-            position: relative;
             font-family: "Dax", sans-serif;
             font-weight: 900;
+            
         }
-        .middle .box:active {
+        .box:active {
             transform: translateY(10px);
         }
-        .middle .box span {
-            position: absolute;
-            transform: translate(0, 60px);
+        .box span {
+            transform: translate(0, 30px);
             left: 0;
             right: 0;
+            height: 100px;
             transition: all 300ms ease;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 550;
             user-select: none;
             color: #007e90;
+
         }
-        .middle .box span:before {
+        .box span:before {
+            transform: translate(0, 30px);
             font-size: 18px;
-            font-family: FontAwesome;
+            font-family: FontAwesomeIcon;
             display: block;
             transform: translateY(-80px);
             opacity: 0;
@@ -66,40 +72,29 @@ const StyledRadioButton = styled.div `
             font-weight: normal;
             color: white;
         }
-        .middle .front-end span:before {
-            content: "\f121";
-        }
-        .middle .back-end span:before {
+        /* .front-end span:before {
             content: "\f0f4";
-        }
-        .middle p {
+        } */
+        
+        p {
             color: #fff;
             font-family: "Dax", sans-serif;
             font-weight: 400;
         }
-        .middle p a {
+        p a {
             text-decoration: underline;
             font-weight: bold;
             color: #fff;
         }
-        .middle p span:after {
+        p span:after {
             content: "\f0e7";
             font-family: FontAwesome;
             color: yellow;
         }
 
-
-
-
-
-
-
-
 `
 
-interface Props {
-    name: string;
-}
+
 
 function RadioButton( { name } ) {
 
@@ -107,16 +102,16 @@ function RadioButton( { name } ) {
 
         <StyledRadioButton>
 
-            <div className="middle">
+            <div >
 
-            <label>
-                <input type="checkbox" name="radio" />
-                <div className="front-end box">
-                <span>
-                    { name }
-                </span>
-                </div>
-            </label>
+                <label>
+                    <input type="checkbox" name="radio" />
+                    <div className="front-end box">
+                        <span>
+                            { name } 
+                        </span>
+                    </div>
+                </label>
 
 
             </div>

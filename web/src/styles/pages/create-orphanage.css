@@ -56,12 +56,7 @@
     line-height: 24px;
   }
   
-  form.create-orphanage-form .input-block label span {
-    font-size: 14px;
-    color: #8FA7B3;
-    margin-left: 24px;
-    line-height: 24px;
-  }
+  
   
   form.create-orphanage-form .input-block input,
   form.create-orphanage-form .input-block textarea {
@@ -76,6 +71,10 @@
   form.create-orphanage-form .input-block input {
     height: 64px;
     padding: 0 16px;
+  }
+
+  .email {
+    margin-bottom: 10px;
   }
   
   form.create-orphanage-form .input-block textarea {
