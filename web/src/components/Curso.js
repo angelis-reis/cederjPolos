@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 tenho que conseguir adaptar os ícones do fontWesome pra ficar com esse efeito maroto */
 
-const StyledRadioButton = styled.div `
+const StyledCurso = styled.div `
 
         label {
             height: 100px;
@@ -86,13 +86,13 @@ const StyledRadioButton = styled.div `
         }
 `
 
-function RadioButton( { name } ) {
+function Curso( { name } ) {
 
     return (
-        <StyledRadioButton>
+        <StyledCurso>
             <div>
                 <label>
-                    <input type="checkbox" name="radio" />
+                    <input type="checkbox" name={ name } value={ name } />
                     <div className="front-end box">
                         <span>
                             { name } 
@@ -100,7 +100,7 @@ function RadioButton( { name } ) {
                     </div>
                 </label>
             </div>
-        </StyledRadioButton>        
+        </StyledCurso>        
     )
 }
-export default RadioButton
+export default Curso
