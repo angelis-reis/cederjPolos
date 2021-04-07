@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /* https://codepen.io/gabrielferreira/pen/oYxNVy/
@@ -11,12 +10,10 @@ const StyledRadioButton = styled.div `
 
         label {
             height: 100px;
-            
         }
        
         input[type="checkbox"] {
-            display: none;
-            
+            display: none;            
         }
         input[type="checkbox"]:checked + .box {
             background-color: #007e90;
@@ -38,13 +35,10 @@ const StyledRadioButton = styled.div `
             transition: all 250ms ease;
             will-change: transition;
             text-align: center;
-            padding-top:30px;
-            
-            
+            padding-top:30px;           
             cursor: pointer;
             font-family: "Dax", sans-serif;
-            font-weight: 900;
-            
+            font-weight: 900;            
         }
         .box:active {
             transform: translateY(10px);
@@ -59,7 +53,6 @@ const StyledRadioButton = styled.div `
             font-weight: 550;
             user-select: none;
             color: #007e90;
-
         }
         .box span:before {
             transform: translate(0, 30px);
@@ -91,19 +84,13 @@ const StyledRadioButton = styled.div `
             font-family: FontAwesome;
             color: yellow;
         }
-
 `
-
-
 
 function RadioButton( { name } ) {
 
     return (
-
         <StyledRadioButton>
-
-            <div >
-
+            <div>
                 <label>
                     <input type="checkbox" name="radio" />
                     <div className="front-end box">
@@ -112,17 +99,8 @@ function RadioButton( { name } ) {
                         </span>
                     </div>
                 </label>
-
-
             </div>
-
-        </StyledRadioButton>
-
-        
+        </StyledRadioButton>        
     )
-
-    
-
 }
-
 export default RadioButton

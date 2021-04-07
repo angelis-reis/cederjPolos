@@ -5,20 +5,17 @@ import { FiPlus } from "react-icons/fi";
 import { useHistory } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import mapIcon from "../utils/mapIcon";
-import '../styles/pages/create-orphanage.css';
+import '../styles/pages/create-polo.css';
 import api from "../services/api";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import RadioButton from "../components/RadioButton";
 
 
 
-export default function OrphanagesMap() { 
+export default function PolosMap() { 
   // as const são estados criados
 
   const history = useHistory();
-
   const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
   const [name, setName] = useState('');
   const [about, setAbout] = useState('');
@@ -29,9 +26,7 @@ export default function OrphanagesMap() {
   const [previewImages, setPreviewImages] = useState<string[]>([]);
 
   function handleMapClick(event: LeafletMouseEvent) {
-
     const { lat, lng } = event.latlng;
-
     setPosition({
       latitude: lat,
       longitude: lng,
@@ -40,7 +35,6 @@ export default function OrphanagesMap() {
 
   async function handleSubmit(event: FormEvent) {
 // previne o funcionamento padrão do formulário html que abre outra pagina ao enviar o form
-
     event.preventDefault();
 
     const { latitude, longitude} = position;
@@ -58,10 +52,9 @@ export default function OrphanagesMap() {
       data.append('images', image);
     })
 
-    await api.post('orphanages', data);
+    await api.post('polos', data);
     alert ('Cadastro realizado com sucesso')
     history.push('/app');
-
     // console.log({
     //   name,
     //   about, 
@@ -71,8 +64,7 @@ export default function OrphanagesMap() {
     //   opening_hours,
     //   open_on_weekends,
     //   images
-    // });
-     
+    // });     
   }
 
   function handleSelectImages(event: ChangeEvent<HTMLInputElement>) {
@@ -88,17 +80,14 @@ export default function OrphanagesMap() {
     const selectedImagesPreview = selectedImages.map(image => {
       return URL.createObjectURL(image )
     });
-
     setPreviewImages(selectedImagesPreview);
   }
  
   return (
-    <div id="page-create-orphanage">
+    <div id="page-create-polo">
       <Sidebar />
-
       <main>
-        <form onSubmit={handleSubmit} className="create-orphanage-form">
-
+        <form onSubmit={handleSubmit} className="create-polo-form">
           <fieldset>
             <legend>Dados do Polo</legend>
             <Map 
@@ -107,14 +96,11 @@ export default function OrphanagesMap() {
               style={{width: '100%', height:'400px'}}
               onclick={handleMapClick}
             >
-
               <TileLayer 
                 url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} 
               />
-
               {/* if em Typescript quando não tenho o else */}
               { position.latitude !== 0 &&(
-
                 <Marker 
                   interactive={false} 
                   icon={mapIcon} 
@@ -125,7 +111,6 @@ export default function OrphanagesMap() {
                 />
               )}
             </Map>
-
             <div className="input-block">
               <label htmlFor="name">Nome do Polo</label>
               <input 
@@ -134,7 +119,6 @@ export default function OrphanagesMap() {
                 onChange={event => setName(event.target.value)}  
               />
             </div>
-
             <div className="input-block">
               <label htmlFor="about">Endereço do Polo </label>
               <textarea
@@ -144,29 +128,21 @@ export default function OrphanagesMap() {
                 onChange={event => setAbout(event.target.value)}  
               />
             </div>
-
             <div className="input-block">
               <label htmlFor="images">Fotos</label>
-
               <div className="images-container">
-
                 {previewImages.map(image => {
                   return (
                     <img key={image} src={image} alt={name} />
                   )
                 })}
-
                 <label htmlFor="image[]" className="new-image">
                   <FiPlus size={24} color="#15b6d6" />
                 </label>
-
               </div>
-
-              <input multiple onChange={handleSelectImages} type="file" id="image[]" />
-              
+              <input multiple onChange={handleSelectImages} type="file" id="image[]" />              
             </div>
           </fieldset>
-
           <fieldset>
             {/* <legend>Informações</legend>
 
@@ -175,8 +151,7 @@ export default function OrphanagesMap() {
               <textarea 
                 id="instructions"
                 value={instructions}
-                onChange={event => setInstructions(event.target.value)} 
-                
+                onChange={event => setInstructions(event.target.value)}                 
               />
             </div> */}
 
@@ -198,7 +173,6 @@ export default function OrphanagesMap() {
                 placeholder="E-mail"
                 onChange={event => setOpeningHours(event.target.value)} 
               />
-
               <input 
                 id="opening_hours" 
                 value={opening_hours}
@@ -210,9 +184,7 @@ export default function OrphanagesMap() {
 
             <div className="input-block">
               <label htmlFor="open_on_weekends">Cursos oferecidos no Polo</label>
-
               <div className="button-select">
-
                 <RadioButton name={ "Administração" } />
                 <RadioButton name={"Administração Pública"}  />
                 <RadioButton name={"Ciências Contábeis"}  />
@@ -243,5 +215,4 @@ export default function OrphanagesMap() {
     </div>
   );
 }
-
 // return `https://a.tile.openstreetmap.org/${z}/${x}/${y}.png`;

@@ -40,7 +40,7 @@
         z-index: 5;
     }
     
-    #page-map .create-orphanage{
+    #page-map .create-polo{
         z-index: 10;
         position: absolute;
         right: 40px;
@@ -55,7 +55,7 @@
         transition: background-color 0.2s;
     }
 
-        #page-map .create-orphanage:hover{
+        #page-map .create-polo:hover{
             background: #17d6eb;
         }
 
