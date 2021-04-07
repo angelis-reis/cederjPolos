@@ -213,46 +213,24 @@ export default function OrphanagesMap() {
 
               <div className="button-select">
 
-                <RadioButton name={ "Tecnologia em Sistema da Computação" } />
-
-                <RadioButton name={" Licenciatura em Biologia"}  />
-
-                <RadioButton name={"Tecnologia em Sistema da Computação"}  />
-
-                <RadioButton name={" Licenciatura em Biologia"}  />
-
-                <RadioButton name={"Tecnologia em Sistema da Computação"} />
-
-                <RadioButton name={" Licenciatura em Biologia"} />
-
-                <RadioButton name={"Tecnologia em Sistema da Computação"} />
-
-                <RadioButton name={" Licenciatura em Biologia"} />
-
-                <RadioButton name={"Tecnologia em Sistema da Computação"} />
-
-                <RadioButton name={" Licenciatura em Biologia"} />
-
-                <RadioButton name={"Tecnologia em Sistema da Computação"} />
-
-                <RadioButton name={" Licenciatura em Biologia"} />
-
-                <RadioButton name={"Tecnologia em Sistema da Computação"} />
-
-                <RadioButton name={" Licenciatura em Biologia"} />
-
-                <RadioButton name={"Tecnologia em Sistema da Computação"} />
-
-                <RadioButton name={" Licenciatura em Biologia"} />
-
-                <RadioButton name={"Tecnologia em Sistema da Computação"} />
-
-                <RadioButton name={" Licenciatura em Biologia"} />
-
-                
-
-                
-
+                <RadioButton name={ "Administração" } />
+                <RadioButton name={"Administração Pública"}  />
+                <RadioButton name={"Ciências Contábeis"}  />
+                <RadioButton name={" Engenharia de Produção"}  />
+                <RadioButton name={"Engenharia Meteorológica"} />
+                <RadioButton name={" Licenciatura em Ciências Biológicas"} />
+                <RadioButton name={"Licenciatura em Física"} />
+                <RadioButton name={"Licenciatura em Geografia"} />
+                <RadioButton name={"Licenciatura em História"} />
+                <RadioButton name={"Licenciatura em Letras"} />
+                <RadioButton name={"Licenciatura em Matemática"} />
+                <RadioButton name={"Licenciatura em Pedagogia"} />
+                <RadioButton name={"Licenciatura em Química"} />
+                <RadioButton name={"Licenciatura em Turismo"} />
+                <RadioButton name={"Tecnologia em Segurança Pública"} />
+                <RadioButton name={"Tecnologia em Sistemas de Computação"} />
+                <RadioButton name={"Tecnologia em Turismo"} />
+                <RadioButton name={"Biblioteconomia"} />
               </div>
             </div>
           </fieldset>
