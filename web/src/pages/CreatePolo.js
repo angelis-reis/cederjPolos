@@ -101,11 +101,17 @@ export default function PolosMap() {
     setPreviewImages(selectedImagesPreview);
   }
 
-  useEffect( () => {
+  /* useEffect( () => {
 
     console.log('Koca: curso', curso );
 
-  }, [curso] ) 
+  }, [curso] )  */
+
+  const handleClick = () => {
+
+    console.log('Koca: handleClick ');
+    
+  }
 
   
  
@@ -224,16 +230,13 @@ export default function PolosMap() {
             <div className="input-block">
               <label htmlFor="open_on_weekends">Cursos oferecidos no Polo</label>
               <div className="button-select">
-                <Curso name={ "Administração" } />
+                <Curso name={ "Administração" } />                
 
-                <button onClick={ () =>console.log('Koca: 2', ) } >
-                  teste
-                </button>
-                
+                {/* <Curso 
+                name={"Administração Pública"}
+                onClick = { () => handleClick()}
+                /> */}
 
-                {/* <button onClick={() => this.shoot("Goal")}>Take the shot!</button> */}
-
-                <Curso name={"Administração Pública"}  />
                 <Curso name={"Ciências Contábeis"}  />
                 <Curso name={" Engenharia de Produção"}  />
                 <Curso name={"Engenharia Meteorológica"} />

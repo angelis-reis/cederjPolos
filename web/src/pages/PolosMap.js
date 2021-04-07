@@ -8,15 +8,15 @@ import mapIcon from '../utils/mapIcon';
 import poloIcon from '../utils/mapIcon.png';
 import '../styles/pages/polos-map.css';
 
-interface Polo{
+/* interface Polo{
     id: number;
     latitude: number;
     longitude: number;
     name: string;
-};
+}; */
 
 function PolosMap() {
-    const [polos, setpolos] = useState<Polo[]>([]);
+    const [polos, setpolos] = useState([]);
     
     useEffect( () => {
         api.get('polos').then(response => {

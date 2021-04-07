@@ -9,7 +9,7 @@ import mapIcon from "../utils/mapIcon";
 import api from '../services/api';
 import PolosMap from "./CreatePolo";
 
-interface Polo {
+/* interface Polo {
   latitude: number;
   longitude: number;
   name: string;
@@ -21,16 +21,16 @@ interface Polo {
     url: string;
     id: number;
   }>;
-};
+}; */
 
-interface PoloParams {
+/* interface PoloParams {
   id: string;
-}
+} */
 
 export default function Polo() {
 
-  const params = useParams<PoloParams>();
-  const [polo, setPolo] = useState<Polo>();
+  const params = useParams();
+  const [polo, setPolo] = useState();
   const [activeImageIndex, setActiveImageIndex] = useState(0);
     
   useEffect( () => {

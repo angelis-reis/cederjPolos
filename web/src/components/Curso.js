@@ -88,11 +88,23 @@ const StyledCurso = styled.div `
 
 function Curso( { name } ) {
 
+    const handleClick = (name) => {
+        
+
+        console.log('Koca: handleClick ', name);
+        
+    }
+
     return (
         <StyledCurso>
             <div>
                 <label>
-                    <input type="checkbox" name={ name } value={ name } />
+                    <input 
+                        type="checkbox" 
+                        name={ name } 
+                        value={ name }
+                        onClick = { () => handleClick(name) }
+                    />
                     <div className="front-end box">
                         <span>
                             { name } 
