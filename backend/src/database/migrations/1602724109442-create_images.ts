@@ -14,8 +14,6 @@ export class createImages1602724109442 implements MigrationInterface {
                     isPrimary: true,
                     isGenerated: true,
                     generationStrategy: 'increment',
-
-                
                 },
 
                 {
@@ -24,22 +22,18 @@ export class createImages1602724109442 implements MigrationInterface {
                 },
 
                 {
-                    name: 'orphanage_id',
+                    name: 'polo_id',
                     type: 'integer',
                 },
-
-
-
             ],
             foreignKeys: [
                 {
-                    name: 'ImageOrphanage',
-                    columnNames: ['orphanage_id'],
-                    referencedTableName: 'orphanages',
+                    name: 'ImagePolo',
+                    columnNames: ['polo_id'],
+                    referencedTableName: 'polos',
                     referencedColumnNames: ['id'],
                     onUpdate: 'CASCADE',
                     onDelete: 'CASCADE',
-
                 }
             ]
         }))
@@ -48,5 +42,4 @@ export class createImages1602724109442 implements MigrationInterface {
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropTable('images')
     }
-
 }

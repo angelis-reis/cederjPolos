@@ -1,14 +1,12 @@
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
-export class createOrphanages1602703931317 implements MigrationInterface {
+export class createPolos1602703931317 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
-
         //realizar alterações
         // criar tabela, deletar campos, etc
-
         await queryRunner.createTable(new Table({
-            name: 'orphanages',
+            name: 'polos',
             columns: [
                 {
                     name: 'id',
@@ -17,7 +15,6 @@ export class createOrphanages1602703931317 implements MigrationInterface {
                     isPrimary: true,
                     isGenerated: true,
                     generationStrategy: 'increment',
-
                 },
 
                 {
@@ -60,18 +57,12 @@ export class createOrphanages1602703931317 implements MigrationInterface {
                     type: 'boolean',
                     default: false,
                 },
-
-                
-
             ]
         }))
     }; 
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-
-        //desfa o feito no up
-
-        await queryRunner.dropTable('orphanages');
+        //desfaz o que foi feito no up
+        await queryRunner.dropTable('polos');
     }
-
 }
