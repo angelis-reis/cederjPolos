@@ -230,14 +230,8 @@ export default function PolosMap() {
             <div className="input-block">
               <label htmlFor="open_on_weekends">Cursos oferecidos no Polo</label>
               <div className="button-select">
-                <Curso name={ "Administração" } />                
-
-                {/* <Curso 
-                name={"Administração Pública"}
-                onClick = { () => handleClick()}
-                /> */}
-
-                <Curso name={"Ciências Contábeis"}  />
+                <Curso name={ "Administração" } id={"adm"} />  
+                <Curso name={"Ciências Contábeis"} id={"bio"} />
                 <Curso name={" Engenharia de Produção"}  />
                 <Curso name={"Engenharia Meteorológica"} />
                 <Curso name={" Licenciatura em Ciências Biológicas"} />

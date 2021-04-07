@@ -86,13 +86,16 @@ const StyledCurso = styled.div `
         }
 `
 
-function Curso( { name } ) {
+function Curso( { name, id } ) {
 
-    const handleClick = (name) => {
-        
 
-        console.log('Koca: handleClick ', name);
-        
+    function handleClick( { name, id }) {
+        /* console.log('Koca: id ', id);
+        console.log('Koca: name ', name); */
+
+        const isSelected = document.querySelector(`%{id}`);
+        console.log('Koca: isSelected ', isSelected);
+       
     }
 
     return (
@@ -100,10 +103,9 @@ function Curso( { name } ) {
             <div>
                 <label>
                     <input 
-                        type="checkbox" 
-                        name={ name } 
-                        value={ name }
-                        onClick = { () => handleClick(name) }
+                        type= "checkbox" 
+                        id = { id }
+                        onClick = { () => handleClick({ name , id}) }
                     />
                     <div className="front-end box">
                         <span>
