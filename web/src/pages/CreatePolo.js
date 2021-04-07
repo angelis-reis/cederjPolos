@@ -37,8 +37,8 @@ export default function PolosMap() {
   const [curso, setCurso] = useState("");
 
   
-  const [images, setImages] = useState<File[]>([]);
-  const [previewImages, setPreviewImages] = useState<string[]>([]);
+  const [images, setImages] = useState([]);
+  const [previewImages, setPreviewImages] = useState([]);
 
   function handleMapClick(event: LeafletMouseEvent) {
     const { lat, lng } = event.latlng;
@@ -100,6 +100,12 @@ export default function PolosMap() {
     });
     setPreviewImages(selectedImagesPreview);
   }
+
+  useEffect( () => {
+
+    console.log('Koca: curso', curso );
+
+  }, [curso] ) 
 
   
  
@@ -189,7 +195,7 @@ export default function PolosMap() {
             </div> */}
 
             <div className="input-block">
-              <label htmlFor="opening_hours">Horário de funcionamento</label>
+              <label  htmlFor="opening_hours">Horário de funcionamento</label>
               <input 
                 id="opening_hours" 
                 value={opening_hours}
@@ -218,7 +224,15 @@ export default function PolosMap() {
             <div className="input-block">
               <label htmlFor="open_on_weekends">Cursos oferecidos no Polo</label>
               <div className="button-select">
-                <Curso name={ "Administração" } onclick={ () => setCurso( "Administração" ) }/>
+                <Curso name={ "Administração" } />
+
+                <button onClick={ () =>console.log('Koca: 2', ) } >
+                  teste
+                </button>
+                
+
+                {/* <button onClick={() => this.shoot("Goal")}>Take the shot!</button> */}
+
                 <Curso name={"Administração Pública"}  />
                 <Curso name={"Ciências Contábeis"}  />
                 <Curso name={" Engenharia de Produção"}  />
