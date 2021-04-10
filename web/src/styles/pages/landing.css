@@ -1,89 +1,89 @@
-#page-landing{
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(329.54deg, #fefefe 0%, #fefefe 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#page-landing {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(329.54deg, #fefefe 0%, #fefefe 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-    #page-landing .content-wrapper{
-        position: relative;
-        width: 100%;
-        max-width: 1100px;
-        height: 100%;
-        max-height: 680px;
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: space-between;
-        background: url('../../images/cederj_aluna.jpg') no-repeat 80% center;
-    }
+#page-landing .content-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 1100px;
+	height: 100%;
+	max-height: 680px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: space-between;
+	background: url('../../images/cederj_aluna.jpg') no-repeat 80% center;
+}
 
-    #page-landing .content-wrapper img {
-        width:100px;
-        height: auto;
-    }
+#page-landing .content-wrapper img {
+	width: 100px;
+	height: auto;
+}
 
-    .content-wrapper span {
-        font-size: 52px;
-        font-weight:bold;
-        line-height: 52px;
-        color:#000000;
-        margin-left: 20px;
-    }
+.content-wrapper span {
+	font-size: 52px;
+	font-weight: bold;
+	line-height: 52px;
+	color: #000000;
+	margin-left: 20px;
+}
 
-    .logo-wrapper {
-        display: flex;
-        flex-direction: row
-    }
+.logo-wrapper {
+	display: flex;
+	flex-direction: row;
+}
 
-    #page-landing .content-wrapper main h1{
-        max-width: 380px;
-        font-size: 52px;
-        font-weight:bold;
-        line-height: 52px;
-        color:#000000;
-    }
+#page-landing .content-wrapper main h1 {
+	max-width: 380px;
+	font-size: 52px;
+	font-weight: bold;
+	line-height: 52px;
+	color: #000000;
+}
 
-    #page-landing .content-wrapper main p{
-        max-width: 350px;
-        margin-top: 40px;
-        font-size: 24px;
-        line-height: 34px;
-        color:#000000
-    }
+#page-landing .content-wrapper main p {
+	max-width: 350px;
+	margin-top: 40px;
+	font-size: 24px;
+	line-height: 34px;
+	color: #000000;
+}
 
-    .content-wrapper .location{
-        position: absolute;
-        right: 0;
-        top: 0;
-        display: flex;
-        flex-direction: column;
-        color:#000000
-    }
+.content-wrapper .location {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	color: #000000;
+}
 
-        .location span{
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 32px;
-            text-align: end;
-        }
+.location span {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 32px;
+	text-align: end;
+}
 
-    .content-wrapper .enter-app{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 80px;
-        height: 80px;
-        background: #ffd666;
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.2s;
-    }
+.content-wrapper .enter-app {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 80px;
+	height: 80px;
+	background: #ffd666;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.2s;
+}
 
-     .content-wrapper .enter-app:hover{
-         background: #96FEFF;
-     }
+.content-wrapper .enter-app:hover {
+	background: #96feff;
+}

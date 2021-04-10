@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import PolosMap from './pages/PolosMap';
@@ -14,16 +14,16 @@ const GlobalStyles = createGlobalStyle`
 ` */
 
 function Routes() {
-    return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/" exact component={Landing} />
-                <Route path="/app" component={PolosMap} />
-                <Route path="/polos/create" component={CreatePolo} />
-                <Route path="/polos/:id" component={Polo} />   
-                    {/* fiquei 4 horas procurando um erro, ára um espaço no fim desta rota */}
-            </Switch>
-        </BrowserRouter>
-    );
+	return (
+		<BrowserRouter>
+			<Switch>
+				<Route path='/' exact component={Landing} />
+				<Route path='/app' component={PolosMap} />
+				<Route path='/polos/create' component={CreatePolo} />
+				<Route path='/polos/:id' component={Polo} />
+				{/* fiquei 4 horas procurando um erro, ára um espaço no fim desta rota */}
+			</Switch>
+		</BrowserRouter>
+	);
 }
 export default Routes;
